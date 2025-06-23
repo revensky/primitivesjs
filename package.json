@@ -1,0 +1,61 @@
+{
+  "name": "@revensky/primitives",
+  "version": "0.0.1",
+  "description": "Utilities for manipulating NodeJS' Primitives.",
+  "license": "MIT",
+  "homepage": "https://github.com/revensky/primitivesjs#readme",
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "pnpm exec tsc -p tsconfig.build.json",
+    "prepare": "pnpm exec husky",
+    "test": "pnpm exec jest",
+    "release": "pnpm pack --pack-destination release",
+    "publish": "pnpm run build && pnpm run release && pnpm publish",
+    "postpublish": "rm -rf dist release"
+  },
+  "bugs": {
+    "url": "https://github.com/revensky/primitivesjs/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/revensky/primitivesjs.git"
+  },
+  "author": {
+    "name": "Eduardo Ribeiro Rezende",
+    "url": "https://github.com/revensky"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.com"
+  },
+  "keywords": [
+    "Primitives"
+  ],
+  "devDependencies": {
+    "@commitlint/cli": "^19.8.1",
+    "@commitlint/config-conventional": "^19.8.1",
+    "@eslint/js": "^9.29.0",
+    "@types/jest": "^30.0.0",
+    "@types/node": "^24.0.3",
+    "commitizen": "^4.3.1",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^9.29.0",
+    "eslint-plugin-jest": "^29.0.1",
+    "eslint-plugin-prettier": "^5.5.0",
+    "globals": "^16.2.0",
+    "husky": "^9.1.7",
+    "jest": "^30.0.2",
+    "lint-staged": "^16.1.2",
+    "neostandard": "^0.12.1",
+    "prettier": "^3.5.3",
+    "reflect-metadata": "^0.2.2",
+    "ts-jest": "^29.4.0",
+    "ts-node": "^10.9.2",
+    "tslib": "^2.8.1",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.34.1"
+  }
+}
