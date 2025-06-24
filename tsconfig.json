@@ -14,7 +14,7 @@
     "alwaysStrict": true,
     "assumeChangesOnlyAffectDirectDependencies": true,
     "checkJs": false,
-    "declaration": false,
+    "declaration": true,
     "exactOptionalPropertyTypes": true,
     "forceConsistentCasingInFileNames": true,
     "importHelpers": true,
@@ -57,7 +57,8 @@
     "verbatimModuleSyntax": false
   },
   "exclude": [
-    "node_modules",
+    "dist",
+    "node_modules"
   ],
   "ts-node": {
     "compilerOptions": {

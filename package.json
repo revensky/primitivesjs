@@ -1,6 +1,6 @@
 {
   "name": "@revensky/primitives",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Utilities for manipulating NodeJS' Primitives.",
   "license": "MIT",
   "homepage": "https://github.com/revensky/primitivesjs#readme",
