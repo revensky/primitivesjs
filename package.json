@@ -13,7 +13,7 @@
     "prepare": "pnpm exec husky",
     "test": "pnpm exec jest",
     "release": "pnpm pack --pack-destination release",
-    "publish": "pnpm run build && pnpm run release && pnpm publish",
+    "publish": "pnpm run build && pnpm run release && pnpm publish --access public",
     "postpublish": "rm -rf dist release"
   },
   "bugs": {
@@ -26,10 +26,6 @@
   "author": {
     "name": "Eduardo Ribeiro Rezende",
     "url": "https://github.com/revensky"
-  },
-  "publishConfig": {
-    "access": "public",
-    "registry": "https://registry.npmjs.com"
   },
   "keywords": [
     "Primitives"
