@@ -38,7 +38,7 @@
     "preserveSymlinks": false,
     "preserveValueImports": false,
     "preserveWatchOutput": true,
-    "removeComments": true,
+    "removeComments": false,
     "resolveJsonModule": false,
     "resolvePackageJsonExports": false,
     "resolvePackageJsonImports": false,
