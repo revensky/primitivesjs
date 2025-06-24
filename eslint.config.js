@@ -1,6 +1,7 @@
 import { defineConfig } from 'eslint/config';
 import jest from 'eslint-plugin-jest';
 import prettier from 'eslint-plugin-prettier';
+import simpleImportSort from 'eslint-plugin-simple-import-sort';
 import globals from 'globals';
 import neostandard, { resolveIgnoresFromGitignore } from 'neostandard';
 
@@ -8,7 +9,7 @@ import js from '@eslint/js';
 
 export default defineConfig([
   ...neostandard({
-    ignores: [...resolveIgnoresFromGitignore(), 'eslint.config.mjs'],
+    ignores: [...resolveIgnoresFromGitignore(), 'eslint.config.js'],
     semi: true,
     noStyle: true,
     noJsx: true,
@@ -16,10 +17,17 @@ export default defineConfig([
   }),
   {
     files: ['**/*.js', '**/*.ts'],
-    plugins: { js, prettier },
+    plugins: { js, prettier, 'simple-import-sort': simpleImportSort },
     languageOptions: { globals: globals.node },
     extends: ['js/recommended'],
     rules: {
+      'simple-import-sort/imports': [
+        'error',
+        {
+          groups: [['^\\u0000'], ['^\\w'], ['^@\\w'], ['^\\.\\.(?!/?$)', '^\\./(?=.*/)(?!/?$)', '^\\.(?!/?$)']],
+        },
+      ],
+      'simple-import-sort/exports': 'error',
       'import-x/first': 'error',
       'import-x/newline-after-import': 'error',
       'import-x/no-duplicates': 'error',
