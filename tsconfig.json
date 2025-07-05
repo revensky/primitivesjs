@@ -15,6 +15,7 @@
     "assumeChangesOnlyAffectDirectDependencies": true,
     "checkJs": false,
     "declaration": true,
+    "esModuleInterop": true,
     "exactOptionalPropertyTypes": true,
     "forceConsistentCasingInFileNames": true,
     "importHelpers": true,
@@ -58,7 +59,8 @@
   },
   "exclude": [
     "dist",
-    "node_modules"
+    "node_modules",
+    "**/*.spec.ts"
   ],
   "ts-node": {
     "compilerOptions": {

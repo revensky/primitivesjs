@@ -32,6 +32,7 @@ export default defineConfig([
       'import-x/newline-after-import': 'error',
       'import-x/no-duplicates': 'error',
       'no-redeclare': 'off',
+      'no-unused-vars': 'off',
       'prettier/prettier': 'error',
     },
   },
